@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proforma: MyString
+  quotation: one
+  quotationdetail: one
+  variant: one
+  totalorder: MyString
+
+two:
+  proforma: MyString
+  quotation: two
+  quotationdetail: two
+  variant: two
+  totalorder: MyString

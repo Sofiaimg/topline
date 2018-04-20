@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Quotation:</strong></th>
+      <th><strong>Brand:</strong></th>
+      <th><strong>Product:</strong></th>
+      <th><strong>Color:</strong></th>
+      <th><strong>Quantity:</strong></th>
+      <th><strong>Size:</strong></th>
+      <th><strong>Ratio:</strong></th>
+      <th><strong>Deliverydate:</strong></th>
+      <th><strong>Targetprice:</strong></th>
+      <th><strong>Finalprice:</strong></th>
+      <th><strong>Style:</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @quotationdetail.quotation.id %></td>
+      <td><%= @quotationdetail.brand.name %></td>
+      <td><%= @quotationdetail.product.description %></td>
+      <td><%= @quotationdetail.color.name %></td>
+      <td><%= @quotationdetail.quantity %></td>
+      <td><%= @quotationdetail.size.name %></td>
+      <td><%= @quotationdetail.ratio %></td>
+      <td><%= @quotationdetail.deliverydate %></td>
+      <td><%= @quotationdetail.targetprice %></td>
+      <td><%= @quotationdetail.finalprice %></td>
+      <td><%= @quotationdetail.otherdetails %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</p>
+
+<p>
+</p>
+
+<%= link_to 'Edit', edit_quotationdetail_path(@quotationdetail) %> |
+<%= link_to 'Back', quotationdetails_path %>

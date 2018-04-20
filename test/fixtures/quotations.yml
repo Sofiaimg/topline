@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  season: one
+  supplier: one
+  handler: one
+  seller: one
+  client: one
+  paymentterm: one
+  status: false
+
+two:
+  season: two
+  supplier: two
+  handler: two
+  seller: two
+  client: two
+  paymentterm: two
+  status: false

@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Topline</title>
+    <link rel="icon" href="app/assets/images/favicon.ico">
+    <title>StgoOffice</title>
     <%= csrf_meta_tags %>
 
+    <link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+    <%= render "layouts/navbar" %>
+<hr>
+    <div id="wrapper" class="toggled" > <!--class="toggled -->
+          <div id="page-content-wrapper" class="card">
+            <%= render "layouts/navbar3" %>
+            <div class="card-header">
+              <h4 class="font-italic">Top Line Ltda. AG Chile</h4>
+            </div>
+            <%= yield %>
+          </div>
+          <div class="card-footer text.center">
+            <div class="text-center">
+              <small>Copyright © Laban.cl 2018</small>
+            </div>
+         </div>
+      </div>
+    </div>
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('#myTable').DataTable();
+    } );
+    </script>
+
+</body>
+
+
 </html>

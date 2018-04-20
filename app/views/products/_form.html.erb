@@ -1,0 +1,62 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-responsive table-striped table-bordered table-hover table-sm ">
+
+    <thead>
+      <div class="field">
+        <%= form.label :photo%>
+        <%= form.file_field :photoe, id: :product_photo %>
+        <%= form.text_field :remote_photo_url, id: :remote_image_photo %>
+    </div>
+      <tr>
+        <th><%= form.label :category_id %></th>
+        <th><%= form.label :description %></th>
+        <th><%= form.label :composition %></th>
+        <th><%= form.label :construction %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= form.collection_select :category_id, Category.all, :id, :name %></td>
+        <td><%= form.text_field :description, id: :product_description %></td>
+        <td><%= form.text_field :composition, id: :product_composition %></td>
+        <td><%= form.text_field :construction, id: :product_construction %></td>
+      </tr>
+    </tbody>
+    <thead>
+      <th><%= form.label :finish %></th>
+      <th><%= form.label :fit %></th>
+      <th><%= form.label :placket %></th>
+      <th><%= form.label :pocket %></th>
+      <th><%= form.label :washing %></th>
+      <th><%= form.label :other %></th>
+
+    </thead>
+    <tbody>
+      <td><%= form.text_field :finish, id: :product_finish %></td>
+      <td><%= form.text_field :fit, id: :product_fit %></td>
+      <td><%= form.text_field :placket, id: :product_placket %></td>
+      <td><%= form.text_field :pocket, id: :product_pocket %></td>
+      <td><%= form.text_field :washing, id: :product_washing %></td>
+      <td><%= form.text_field :other, id: :product_other %></td>
+    </tbody>
+  </table>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
